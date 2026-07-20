@@ -1,0 +1,184 @@
+/* ==========================================================
+   共通スタイル（骨組み段階の仮デザイン）
+   配色・フォントはグループで相談して調整してください
+   ========================================================== */
+
+:root {
+  --color-bg: #faf9f6;
+  --color-text: #222222;
+  --color-primary: #1b5e5a;
+  --color-border: #dddddd;
+  --font-base: "Hiragino Sans", "Yu Gothic", sans-serif;
+  --max-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- ヘッダー ---------- */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.site-title a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-text);
+}
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ---------- メイン ---------- */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.spot-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.spot-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.spot-card h2 {
+  padding: 0.5rem 0.75rem 0;
+  font-size: 1.1rem;
+}
+.spot-card p {
+  padding: 0 0.75rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- 詳細ページ ---------- */
+.spot-detail h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.spot-detail h2 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.75rem;
+}
+.main-photo {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.info-table th,
+.info-table td {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+.info-table th {
+  background-color: #f0efe9;
+  width: 30%;
+  white-space: nowrap;
+}
+
+iframe {
+  border-radius: 8px;
+}
+
+/* ---------- フッター ---------- */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+/* ---------- レスポンシブ（スマホ対応） ---------- */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .site-nav {
+    display: none;
+    width: 100%;
+  }
+  .site-nav.is-open {
+    display: block;
+  }
+  .site-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 0.5rem;
+  }
+  .site-nav li {
+    border-top: 1px solid var(--color-border);
+  }
+  .site-nav a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .spot-list {
+    grid-template-columns: 1fr;
+  }
+
+  .info-table th {
+    width: 35%;
+  }
+}
