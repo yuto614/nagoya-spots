@@ -18,19 +18,7 @@
   padding: 0;
 }
 
-body {
-  font-family: var(--font-base);
-  color: var(--color-text);
-  line-height: 1.7;
 
-  /* ページ全体の背景を名古屋の風景写真に変更 */
-  background-color: var(--color-bg); /* 画像読み込み前・失敗時のフォールバック色 */
-  background-image: url("../images/nagoya-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 a {
   color: var(--color-primary);
