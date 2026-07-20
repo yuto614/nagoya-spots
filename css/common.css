@@ -1,11 +1,15 @@
+/* ==========================================================
+   共通スタイル（ダークベース・シンプル配色）
+   ========================================================== */
+
 :root {
-  --color-bg: #1c1e21;          /* ページ全体の背景（ダークグレー） */
-  --color-surface: #26292d;     /* カードやヘッダーなど一段明るい面 */
-  --color-surface-alt: #2f3236; /* 表のth背景など、さらに一段明るい面 */
-  --color-text: #e8e8e6;        /* 本文の文字色（白に近いグレー） */
-  --color-text-muted: #a3a7ac;  /* フッターなど控えめな文字色 */
-  --color-primary: #8fb4a8;     /* リンクなどのアクセント（落ち着いたグレイッシュグリーン） */
-  --color-border: #3a3d42;      /* 境界線（ダーク背景に馴染む濃いグレー） */
+  --color-bg: #f2f2f0;          /* ページ全体の背景（ライトグレー） */
+  --color-surface: #ffffff;     /* カードやヘッダーなど一段明るい面 */
+  --color-surface-alt: #e8e8e5; /* 表のth背景など、少し沈んだ面 */
+  --color-text: #2b2d30;        /* 本文の文字色（黒に近いグレー） */
+  --color-text-muted: #6b6e72;  /* フッターなど控えめな文字色 */
+  --color-primary: #4d746a;     /* リンクなどのアクセント（落ち着いたグリーン） */
+  --color-border: #d4d4d1;      /* 境界線（ライト背景に馴染む薄いグレー） */
   --font-base: "Hiragino Sans", "Yu Gothic", sans-serif;
   --max-width: 960px;
 }
@@ -39,7 +43,7 @@ img {
 
 /* ---------- ヘッダー ---------- */
 .site-header {
-  background-color: rgba(38, 41, 45, 0.92);
+  background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(4px);
 }
