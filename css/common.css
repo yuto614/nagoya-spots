@@ -21,8 +21,15 @@
 body {
   font-family: var(--font-base);
   color: var(--color-text);
-  background-color: var(--color-bg);
   line-height: 1.7;
+
+  /* ページ全体の背景を名古屋の風景写真に変更 */
+  background-color: var(--color-bg); /* 画像読み込み前・失敗時のフォールバック色 */
+  background-image: url("../images/nagoya-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -41,8 +48,9 @@ img {
 
 /* ---------- ヘッダー ---------- */
 .site-header {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(4px);
 }
 .header-inner {
   max-width: var(--max-width);
@@ -80,6 +88,9 @@ main {
 
 .hero {
   margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
 }
 .hero h1 {
   font-size: 1.8rem;
@@ -123,6 +134,7 @@ main {
 .info-table {
   width: 100%;
   border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.92);
 }
 .info-table th,
 .info-table td {
@@ -147,6 +159,7 @@ iframe {
   padding: 1.5rem 1rem;
   font-size: 0.85rem;
   color: #666666;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 /* ---------- レスポンシブ（スマホ対応） ---------- */
@@ -180,5 +193,9 @@ iframe {
 
   .info-table th {
     width: 35%;
+  }
+
+  body {
+    background-attachment: scroll; /* スマホでのfixed背景による表示不具合を回避 */
   }
 }
