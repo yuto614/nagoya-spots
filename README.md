@@ -1,10 +1,8 @@
 # 名古屋おすすめスポット紹介サイト
 
-グループワークで作成するWebサイトのリポジトリ．
-
 ## メンバー
-- (氏名を記入)
-- (氏名を記入)
+- 241205153 藤木勇杜
+- 241205154 古川東吾
 
 ## 紹介スポット
 - 名古屋港水族館
@@ -23,5 +21,5 @@ images/                画像ファイル
 ```
 
 ## 担当分担
-- (氏名)：index.html, aquarium.html
-- (氏名)：atsuta.html, science-museum.html
+- 藤木：index.html，main.js，common.css
+- 古川：aquarium.html，atsuta.html，science-museum.html
